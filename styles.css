@@ -1,0 +1,45 @@
+
+body{
+    margin:0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header img{
+    height: 200px
+}
+header{
+    text-align: center;
+    box-shadow: 5px 5px 5px;
+    background-color: rgb(245, 244, 237);
+}
+nav{
+    padding: 10px;
+    box-shadow: 5px 5px 5px;
+    background-color: rgba(199, 119, 0, 0.959);
+
+}
+nav a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 5px 15px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    transition: 0.5s;
+}
+nav a:hover{
+    color: rgb(134, 76, 0);
+    transition: 0.5s;
+}
+.deskripsiHome{
+    width:40%;
+    margin-left: 50px;
+    font-size: 20px;
+    & h3{
+        color: rgb(59, 28, 0);
+    }
+}
+.home{
+    background-image: url(Sourdough.png);
+    height: 600px;
+    background-size:cover;
+    padding-top: 50px;
+}
