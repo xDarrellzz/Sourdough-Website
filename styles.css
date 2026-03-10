@@ -1,7 +1,11 @@
 
 body{
     margin:0;
-    font-family: m
+    font-family: 'Poppins', sans-serif;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 header img{
     height: 200px
@@ -12,10 +16,17 @@ header{
     background-color: rgb(245, 244, 237);
 }
 nav{
-    padding: 15px;
-    box-shadow: 5px 5px 5px;
-    background-color: rgba(85, 40, 0, 0.959);
-
+    padding: 10px;
+    box-shadow: 0px 2px 5px 2px;
+    background-color: rgba(85, 40, 0, 0.9);
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    color: black;
+    z-index: 1000;
+    display:flex;
+    align-items: center;
 }
 nav a{
     text-decoration: none;
@@ -25,27 +36,29 @@ nav a{
     font-family: 'Times New Roman', Times, serif;
     transition: 0.5s;
     border-radius: 10px;
+
 }
 nav a:hover{
     color: rgb(255, 255, 255);
-    background-color: rgb(150, 85, 0);
-    transition: background-color 1s ease, transform 1s ease;
-    transform: scale(1.5);
-    box-shadow: rgb(245, 244, 237) 2px 2px 5px 5px;
+    background-color: rgb(150, 70, 0, 0.8);
+    transform: scale(1.1);
+    box-shadow: rgb(245, 244, 237) 0px 1px 5px 2px;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease, transform 0.3s ease;
 }
 .deskripsiHome{
     width:40%;
     margin-left: 50px;
     font-size: 20px;
-    & h3{
-        color: rgb(85, 40, 0);
-    }
+}
+.deskripsiHome h3{
+    color: rgb(85, 40, 0);
 }
 .home{
     background-image: url(Sourdough.png);
     height: 600px;
     background-size:cover;
     padding-top: 50px;
+    box-shadow: rgb(150, 75, 0) 0px 25px 30px 20px;
 }
 .deskripsiHome a{
     text-decoration: none;
@@ -75,10 +88,74 @@ section.project{
     width: 50%;
     margin: auto;
     padding: 50px 20px;
-    & img{
-        height: 300px;
-    }
+    background-color: rgb(255, 250, 220);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    background-color: rgb(100, 50, 0);
+}
+.containerAbout img{
+    height: 300px;
+}
+html {
+    scroll-behavior: smooth;
+}
+section.guide{
+    padding: 50px 20px;
+    background-color: rgba(245, 245, 220, 0.9);
+}
+.guide img{
+height: 500px;
+}
+.deskGuide{
+display: flex;
+width: 60%;
+margin:auto;
+}
+.dokumentasi{
+margin:20px;
+}
+.cardProfile{
+background-color: rgb(255, 227, 150);
+padding: 15px;
+width: 300px;
+margin: auto;
+text-align: center;
+}
+.imgProfile img{
+width: 100%;
+}
+.medsos{
+left: 0;
+bottom: 0;
+width: 100%;
+text-align: center;
+height:40px;
+padding-top: 5px;
+background-color: rgb(255, 247, 225);
+}
+.medsos a{
+text-decoration: none;
+padding: 10px 10px;
+font-size: 24px;
+}
+section{
+    padding:100px 0;
+}
+nav .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 100px;
+}
+
+nav .logo img {
+    height: 40px;
+}
+
+nav .logo span {
     color: white;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
 }

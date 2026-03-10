@@ -3,7 +3,7 @@
     <head>
         <link rel="stylesheet" href= "styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com" rel="stylesheet">
     </head>
@@ -11,33 +11,68 @@
         <header>
 
             <nav>
-                <a href="#sales"><i class="fa fa-cogs"></i>sales</a>
-                <a href="#service"><i class="fa fa-wrench"></i>service</a>
-                <a href="#about"><i class="fa fa-user-circle"></i>about</a>
-                <a href="#contact"><i class="fa fa-envelope"></i>contact</a>
+                <div class="logo">
+                    <img src="logo.png" alt="Logo" />
+                    <span>Roti Bakery Sourdough Biotech Blog</span>
+                </div>
+                <a href="#home"><i class="fa fa-home"></i> home</a>
+                <a href="#about"><i class="fa fa-info-circle"></i> about</a>
+                <a href="#guide"><i class="fa fa-book"></i> guide</a>
+                <a href="#profile"><i class="fa fa-user"></i> profile</a>
             </nav>
         </header>
-        <section class = "home">
+        <section id="home" class = "home">
             <div class = "deskripsiHome">
                 <h1>Welcome</h1>
                 <h3>Biotechnology Sourdough Bread</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                <p>Selamat datang di blog resmi Roti Bakery Sourdough Biotech! Di sini, kamu bisa mempelajari proses pembuatan roti sourdough berbasis bioteknologi, mulai dari starter hingga produk akhir. Blog ini bertujuan membagikan pengetahuan, dokumentasi eksperimen, dan hasil inovasi kami secara jelas dan mudah dipahami.</p>
                 <div>
-                    <a href="#">Learn More</a>
+                    <a href="#about">Learn More</a>
                 </div>
             </div>
         </section>
-    </body>
-</html>
-<html>
-    <body>
-        <section class="about">
+        <section id="about" class="about">
             <div class="containerAbout">
-                <img src = "sourdough2.png">
+                <img src = "Sourdough2.png">
                 <h3>About My Project</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p> Proyek bioteknologi ini fokus pada pengembangan roti sourdough menggunakan fermentasi alami. Melalui eksperimen ini, kami mengeksplorasi efek berbagai jenis tepung terhadap rasa, aroma, dan tekstur roti. Tujuan utama adalah menciptakan roti yang lebih sehat, memiliki rasa khas asam yang lembut, dan tekstur yang empuk, sambil memanfaatkan prinsip bioteknologi sederhana.</p>
+            </div>
+        </section>
+        <section id="guide" class="guide">
+            <div class="deskGuide">
+                <div class="penjelasan">
+                <h2>Cara Pembuatan</h2>
+                <p>
+                1. Siapkan starter sourdough dengan mencampur tepung dan air, biarkan fermentasi selama 24-48 jam hingga muncul gelembung.<br>
+                2. Campurkan starter dengan tepung, air, dan garam sesuai resep, uleni hingga adonan elastis.<br>
+                3. Diamkan adonan untuk proses fermentasi utama selama beberapa jam agar tekstur dan rasa terbentuk.<br>
+                4. Bentuk adonan, lalu panggang di oven hingga matang dengan aroma dan warna khas sourdough.
+            </p>
+            <p>
+                Setiap langkah dicatat dan didokumentasikan untuk analisis hasil akhir, termasuk pengamatan rasa, aroma, dan tekstur. Foto dokumentasi tersedia di sebelah kanan untuk memudahkan pemahaman.
+            </p>
+                </div>
+                <div class="dokumentasi">
+                    <img src="Sourdough3.webp">
+                </div>
+            </div>
+        </section>
+        <section id="profile" class="profile">
+            <div class="cardProfile">
+                <div class="imgProfile">
+                    <img src="profile.jpeg">
+                </div>
+                <div class="deskProfile">
+                    <h3>Darrell Rayford Tjahjadi</h3>
+                    <p>9C/12</p>
+                </div>
+                <div class = "medsos">
+                    <a href="https://wa.me/+6282240025460" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/darxrell/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=darrellrayford8@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+                    <a href="https://www.youtube.com/@SilverIndo1" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                    <a href="https://www.facebook.com/DarrellTjahjadi" target="_blank"><i class="fa fa-facebook"></i>
+                </div>
             </div>
         </section>
     </body>
