@@ -2,13 +2,10 @@
 body{
     margin:0;
     font-family: 'Poppins', sans-serif;
-    background-image: url("background.jpg");
+    background-image: url(bg1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-header img{
-    height: 200px
 }
 header{
     text-align: center;
@@ -29,21 +26,25 @@ nav{
     align-items: center;
 }
 nav a{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
     color: rgb(255, 255, 255);
     padding: 5px 20px;
     font-size: 16px;
     font-family: 'Times New Roman', Times, serif;
-    transition: 0.5s;
     border-radius: 10px;
-
+    gap: 4px;
+    overflow: visible;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease, transform 0.3s ease-in-out;
 }
+
 nav a:hover{
+    transform: scale(1.1) translateY(-2px);
     color: rgb(255, 255, 255);
     background-color: rgb(150, 70, 0, 0.8);
-    transform: scale(1.1);
     box-shadow: rgb(245, 244, 237) 0px 1px 5px 2px;
-    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease, transform 0.3s ease;
 }
 .deskripsiHome{
     width:40%;
@@ -71,11 +72,11 @@ nav a:hover{
 }
 .deskripsiHome a:hover{
     box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.719);
-    padding: 11px 31px;
+    padding: 12px 32px;
 }
 .deskripsiHome p{
     color: rgb(0, 0, 0);
-    font-family: 'Righteous';
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 .deskripsiHome h1{
     color: rgb(255, 220, 155)
@@ -88,11 +89,12 @@ section.project{
     width: 50%;
     margin: auto;
     padding: 50px 20px;
-    background-color: rgb(255, 250, 220);
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    font-family: 'Righteous';
 }
 .containerAbout img{
     height: 300px;
@@ -102,42 +104,44 @@ html {
 }
 section.guide{
     padding: 50px 20px;
-    background-color: rgba(245, 245, 220, 0.9);
+    background-image: url(bg2.png);
+    position: relative;
+    font-family: 'Righteous';
 }
 .guide img{
-height: 500px;
+    height: 500px;
 }
 .deskGuide{
-display: flex;
-width: 60%;
-margin:auto;
+    display: flex;
+    width: 80%;
+    margin:auto;
+    background-color: aliceblue;
+    padding-left: 10px;
 }
 .dokumentasi{
-margin:20px;
+    margin:20px;
 }
 .cardProfile{
-background-color: rgb(255, 227, 150);
-padding: 15px;
-width: 300px;
-margin: auto;
-text-align: center;
+    background-color: rgb(255, 227, 150);
+    padding: 15px;
+    width: 300px;
+    margin: auto;
+    text-align: center;
 }
 .imgProfile img{
-width: 100%;
+    width: 100%;
 }
 .medsos{
-left: 0;
-bottom: 0;
-width: 100%;
-text-align: center;
-height:40px;
-padding-top: 5px;
-background-color: rgb(255, 247, 225);
+    width: 100%;
+    text-align: center;
+    height:40px;
+    padding-top: 5px;
+    background-color: rgb(255, 247, 225);
 }
 .medsos a{
-text-decoration: none;
-padding: 10px 10px;
-font-size: 24px;
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 24px;
 }
 section{
     padding:100px 0;
@@ -148,11 +152,9 @@ nav .logo {
     gap: 10px;
     margin-right: 100px;
 }
-
 nav .logo img {
     height: 40px;
 }
-
 nav .logo span {
     color: white;
     font-weight: bold;
