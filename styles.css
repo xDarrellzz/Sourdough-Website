@@ -7,11 +7,6 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-header{
-    text-align: center;
-    box-shadow: 5px 5px 5px;
-    background-color: rgb(245, 244, 237);
-}
 nav{
     padding: 10px;
     box-shadow: 0px 2px 5px 2px;
@@ -42,7 +37,6 @@ nav a{
 
 nav a:hover{
     transform: scale(1.1) translateY(-2px);
-    color: rgb(255, 255, 255);
     background-color: rgb(150, 70, 0, 0.8);
     box-shadow: rgb(245, 244, 237) 0px 1px 5px 2px;
 }
@@ -71,7 +65,6 @@ nav a:hover{
     border: 2px rgb(50, 25, 0) solid;
 }
 .deskripsiHome a:hover{
-    box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.719);
     padding: 12px 32px;
 }
 .deskripsiHome p{
@@ -80,10 +73,6 @@ nav a:hover{
 }
 .deskripsiHome h1{
     color: rgb(255, 220, 155)
-}
-section.project{
-    height: 800px;
-    text-align: center;
 }
 .containerAbout{
     width: 50%;
