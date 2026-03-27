@@ -1,27 +1,29 @@
-
+html, body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 body{
     margin:0;
     font-family: 'Poppins', sans-serif;
     background-image: url(bg1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-attachment: fixed;
+    background-size: cover;
+    animation: jalan 20s linear infinite;
 }
 nav{
     padding: 10px;
     box-shadow: 0px 2px 5px 2px;
     background-color: rgba(85, 40, 0, 0.9);
     position: fixed;
-    top: 0px;
-    right: 0px;
-    left: 0px;
-    color: black;
+    top: 0;
+    right: 0;
+    left: 0;
     z-index: 1000;
     display:flex;
     align-items: center;
 }
 nav a{
-    position: relative;
     display: inline-flex;
     align-items: center;
     text-decoration: none;
@@ -31,13 +33,12 @@ nav a{
     font-family: 'Times New Roman', Times, serif;
     border-radius: 10px;
     gap: 4px;
-    overflow: visible;
     transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease, transform 0.3s ease-in-out;
 }
 
 nav a:hover{
     transform: scale(1.1) translateY(-2px);
-    background-color: rgb(150, 70, 0, 0.8);
+    background-color: rgba(150, 70, 0, 0.8);
     box-shadow: rgb(245, 244, 237) 0px 1px 5px 2px;
 }
 .deskripsiHome{
@@ -53,7 +54,9 @@ nav a:hover{
     height: 600px;
     background-size:cover;
     padding-top: 50px;
-    box-shadow: rgb(150, 75, 0) 0px 25px 30px 20px;
+    box-shadow: inset rgb(150, 75, 0) 0px 25px 30px 10px;
+    -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
 }
 .deskripsiHome a{
     text-decoration: none;
@@ -61,11 +64,12 @@ nav a:hover{
     background-color: rgb(100, 50, 0);
     padding: 10px 30px;
     border-radius: 30px;
-    box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.719);
+    box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.7);
     border: 2px rgb(50, 25, 0) solid;
 }
 .deskripsiHome a:hover{
-    padding: 12px 32px;
+    transform: scale(1.05);
+    background-color: rgb(130, 65, 0);
 }
 .deskripsiHome p{
     color: rgb(0, 0, 0);
@@ -78,62 +82,231 @@ nav a:hover{
     width: 50%;
     margin: auto;
     padding: 50px 20px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 50px 2px rgba(255, 210, 112, 0.7);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     font-family: 'Righteous';
+    border-radius: 10px;
 }
-.containerAbout img{
+.img-about{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.img-about::before{
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background: #b47b00;
+    border-radius: 10px;
+    z-index: 0;
+    transition: transform 0.4s ease;
+}
+.img-about:hover::before{
+    transform: rotate(8deg) scale(1.05);
+}
+.img-about img{
     height: 300px;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.4s ease;
+    position: relative;
+    z-index: 1;
 }
-html {
-    scroll-behavior: smooth;
+.img-about:hover img{
+    transform: scale(1.05);
 }
 section.guide{
     padding: 50px 20px;
     background-image: url(bg2.png);
+    width: 100%;
+    margin: auto;
     position: relative;
     font-family: 'Righteous';
-}
-.guide img{
-    height: 500px;
+    box-shadow: 0px 0px 10px 2px rgb(255, 175, 0);
 }
 .deskGuide{
-    display: flex;
     width: 80%;
-    margin:auto;
+    margin:10px;
     background-color: aliceblue;
-    padding-left: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    position: relative;
+}
+.guide-atas{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+.penjelasan-atas{
+    width: 70%;
+    line-height: 1.6;
+}
+.penjelasan-bawah{
+    margin-top: 30px;
+    line-height: 1.6;
 }
 .dokumentasi{
-    margin:20px;
+    position: absolute;
+    width: 200px;
+    transition: transform 0.3s ease;
+    right: -180px;
+}
+.img1{
+    top: 0px;
+    transform: rotate(-8deg)
+}
+.img2{
+    top: 400px;
+    transform: rotate(5deg)
+}
+.img1:hover, .img2:hover{
+    transform: scale(1.1);
+}
+.dokumentasi img{
+    width: 100%;
+    height: auto;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    border: 2px solid #ddd;
+}
+.deskProfile{
+    text-align: center;
+}
+.deskProfile h3, .deskProfile p{
+    color: white;
+    text-shadow: 0 0 10px rgba(255,255,255,0.6);
 }
 .cardProfile{
-    background-color: rgb(255, 227, 150);
-    padding: 15px;
     width: 300px;
-    margin: auto;
+    height: 530px;
+    perspective: 1000px;
+    z-index: 10;
+}
+.card-inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.cardProfile:hover .card-inner{
+    transform: rotateY(180deg);
+}
+.card-front, .card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    background-color: rgb(255, 227, 150);
+    overflow: hidden;
+    box-sizing: border-box;
+    background-image: url("cardbg.jpg");
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgb(255, 200, 0);
+}
+.card-front{
+    justify-content: center;
+    color: white;
+    font-family: 'Righteous';
     text-align: center;
+}
+.card-back{
+    transform: rotateY(180deg);
+    padding: 15px;
+}
+.card-front h1{
+    font-size: 26px;
+    margin: 0;
+    z-index: 1;
+    text-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+.card-front h3{
+    font-size: 16px;
+    margin-top: 5px;
+    z-index: 1;
+    animation: naikTurun 1.5s infinite alternate;
 }
 .imgProfile img{
     width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 .medsos{
     width: 100%;
-    text-align: center;
     height:40px;
     padding-top: 5px;
     background-color: rgb(255, 247, 225);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 .medsos a{
     text-decoration: none;
     padding: 10px 10px;
     font-size: 24px;
+    display: inline-block;
+    color: rgb(77, 50, 0);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.medsos a:hover{
+    transform: scale(1.2);
+    color: rgb(155, 100, 0);
 }
 section{
     padding:100px 0;
+}
+.profile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dok-profile img {
+    width: 200px;
+    height: auto;
+    background: rgb(255, 220, 125);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px rgb(255, 175, 0);
+    border: 2px solid #bd7b00;
+}
+.imgProfileL, .imgProfileR {
+    width: 200px;
+    height: auto;
+    transform: rotate(-8deg);
+    transition: transform 0.3s ease;
+}
+.imgProfileL {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+.imgProfileR {
+    position: absolute;
+    right: 100px;
+    top: 300px;
+    transform: rotate(6deg);
+}
+.imgProfileL:hover, .imgProfileR:hover {
+    transform: scale(1.1) rotate(0deg);
 }
 nav .logo {
     display: flex;
@@ -147,6 +320,17 @@ nav .logo img {
 nav .logo span {
     color: white;
     font-weight: bold;
-    font-family: 'Poppins', sans-serif;
     font-size: 18px;
+}
+@keyframes jalan {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0px 1000px;
+  }
+}
+@keyframes naikTurun{
+    from{ transform: translateY(0); }
+    to{ transform: translateY(5px); }
 }
